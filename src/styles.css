@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  
+}
+/* ff8224 */
+
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(to right top, #ffc0cb, #ffc9c8, #ffd3c8, #ffddcc, #fce6d4, #fddfcc, #fed8c6, #ffd1c0, #ffb6bc, #f39fcc, #c595e7, #5f96fb);
+  padding: 0 10px;
+}
+
+.receipt {
+  position: relative;
+  background-color: #faf2e3;
+  height: 200px;
+  margin-top: 7px;
+  z-index: 2;
+  /* text-align: right; */
+}
+
+.main-text {
+  text-align: right;
+  font-size: 3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: #003267;
+  position: relative;
+  top: 30%;
+  left: -20px;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.secondary-text{
+  text-align: right;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: #003267;
+  position: relative;
+  top: 25%;
+  left: -20px;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #faf2e3;
+  display: inline;
+  position: relative;
+}
+.arrow-first {
+  border-left: 0px solid transparent;
+}
+.arrow-last {
+  border-right: 0px solid transparent;
+}
+.cal-head {
+  overflow: hidden;
+  background: linear-gradient(0deg, pink 50%, transparent 50%);
+  position: relative;
+  top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cal-head::before,
+.cal-head::after {
+  position: absolute;
+  width: 66px;
+  height: 20px;
+  content: "";
+  z-index: 1;
+  bottom: 0px;
+}
+.cal-head::before {
+  left: 30px;
+
+  border-left: 50px solid #003267;
+}
+.cal-head::after {
+  right: 30px;
+
+  border-right: 50px solid #003267;
+}
+.arrows {
+  position: relative;
+  left: 0px;
+  z-index: 1;
+  /*   margin-bottom: 30px; */
+}
+
+.cal-body {
+  background-color: pink;
+  padding: 2rem;
+}
+
+button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 0 2px 4px darkslategray; */
+}
+button:hover {
+  font-weight: 300;
+  color: #003267;
+  background-color: #faf2e3;
+}
+
+button:active {
+  box-shadow: 0 0 2px darkslategray;
+  transform: translateY(2px);
+}
+.symbol {
+  color: #faf2e3;
+  background-color: #003267;
+}
+.symbol-pad {
+  padding: 1.2rem 1.5rem;
+}
+.number {
+  color: #003267;
+}
+.btn-block {
+  border-radius: 5px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  button {
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+  }
+  .main-text {
+    font-size: 1.5rem;
+  }
+  .receipt {
+    height: 150px;
+    width: 200px;
+  }
+  .arrow-disable {
+    display: none;
+  }
+  .cal-head::before {
+    bottom: 0px;
+    left: 22px;
+    border-left: 50px solid #003267;
+  }
+  .cal-head::after {
+    bottom: 0px;
+    right: 22px;
+    border-right: 50px solid #003267;
+  }
+  .cal-head {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+  .cal-body {
+    padding: 1rem;
+  }
+}
